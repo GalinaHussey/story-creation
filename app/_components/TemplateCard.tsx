@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Template } from "../_lib/types";
 import Button from "./Button";
 import { useTemplateContext } from "../_context/TemplateContext";
 
+// Displays a template card with title, description, and a button to open a modal.
 type TemplateCardProps = {
   template: Template;
 };

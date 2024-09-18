@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
+// Displays the website's logo and name.
 function Logo() {
   return (
     <Link href="/" className="flex items-center gap-4 z-10">

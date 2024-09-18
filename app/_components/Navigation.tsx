@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default async function Navigation() {
+// Renders the navigation menu with links.
+export default function Navigation() {
   return (
     <nav className="z-10 text-xxl">
       <ul className="flex items-center gap-16">

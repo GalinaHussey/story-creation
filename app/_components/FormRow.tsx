@@ -1,13 +1,13 @@
 import { ReactNode, isValidElement } from "react";
 
 type FormRowProps = {
-  label?: string;
-  error?: string;
-  children: ReactNode;
+  label?: string; // Label for the input
+  error?: string; // Error message (if any)
+  children: ReactNode; // Input element
 };
 
+// A form row with a label, input (or any child element), and optional error message.
 function FormRow({ label, error, children }: FormRowProps) {
-  // Check if children is a valid React element and extract id if it exists
   const childId = isValidElement(children) ? children.props.id : undefined;
 
   return (
