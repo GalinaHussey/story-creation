@@ -1,10 +1,11 @@
 import TemplateListWrapper from "../_components/TemplateListWrapper";
-import { getTemplates } from "../_lib/data.servise";
+import { getTemplates } from "../_lib/data.service";
 
 export const metadata = {
   title: "Templates",
 };
 
+// The main page that lists all story templates.
 export default async function TemplatePage() {
   const templates = await getTemplates();
 

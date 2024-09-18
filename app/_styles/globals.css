@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom spinner styles */
 @layer components {
   .spinner {
     margin: 3.2rem auto 1.6rem;
