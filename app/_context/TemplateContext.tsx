@@ -10,18 +10,19 @@ import {
 } from "react";
 
 type TemplateContextValue = {
-  isShowing: boolean;
-  setIsShowing: Dispatch<SetStateAction<boolean>>;
+  isShowing: boolean; // State to track if the modal is shown
+  setIsShowing: Dispatch<SetStateAction<boolean>>; // Function to toggle modal visibility
 };
 
 type TemplateContextProviderProps = {
-  children: ReactNode;
+  children: ReactNode; // Child components
 };
 
 const TemplateContext = createContext<TemplateContextValue | undefined>(
   undefined
 );
 
+// Context provider for managing modal visibility state
 function TemplateProvider({ children }: TemplateContextProviderProps) {
   const [isShowing, setIsShowing] = useState(false);
 
@@ -32,6 +33,7 @@ function TemplateProvider({ children }: TemplateContextProviderProps) {
   );
 }
 
+// Hook to use the context in components
 function useTemplateContext() {
   const context = useContext(TemplateContext);
   if (context === undefined) {
