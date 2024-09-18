@@ -6,17 +6,19 @@ import TemplateForm from "./TemplateForm";
 import { useTemplateContext } from "../_context/TemplateContext";
 
 type TemplateListWrapperProps = {
-  templates: Template[];
+  templates: Template[]; // List of templates
 };
 
+// Wrapper component that handles showing the modal and the template list
 function TemplateListWrapper({ templates }: TemplateListWrapperProps) {
-  const { isShowing } = useTemplateContext();
+  const { isShowing } = useTemplateContext(); // Whether the modal form is visible
 
-  if (!templates.length) return null;
+  if (!templates.length) return null; // Renders nothing if no templates are available
 
   return (
     <div>
-      {isShowing && <TemplateForm />}
+      {isShowing && <TemplateForm />}{" "}
+      {/* Show the modal form if isShowing is true */}
       <TemplateList templates={templates} />
     </div>
   );
